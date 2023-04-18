@@ -1,0 +1,380 @@
+---
+layout: layout.njk
+permalink: /index.html
+priority: 1
+bookJsonLd: true
+og_type:
+  "og:type": "books.book"
+  "books:isbn": "9781839214110"
+  "books:rating:value": "5"
+  "books:rating:scale": "5"
+  "books:author":
+    - "https://amzn.to/41ElSUM"
+---
+{% from "analytics.njk" import track with context %}
+<main>
+  <section id="hero" class="hero bg-green bd-rd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered is-gapless">
+          <div class="column">
+            <h1 class="title is-1">Architecting Vue.js 3 Enterprise-Ready Web Applications</h1>
+            <h2 class="subtitle is-4 mt-1">Build and deliver scalable and high-performance, enterprise-ready applications with Vue and JavaScript</h2>
+            <div class="buttons">
+              <a class="button is-primary" href="#buy" {{ track("click_hero_buy") }}>Buy</a>
+              <a class="button" href="#sample-chapter" {{ track("click_hero_sample_chapter") }}>Download sample chapter</a>
+            </div>
+          </div>
+          <div class="column pos-rel">
+            <div class="floating-label">
+              <a href="#buy">
+                <span class="tag is-primary">
+                  <strong>1st Edition!</strong></span></a>
+            </div>
+            {% responsiveImage './img/book-stack.png', 'Node.js Design Patterns book cover', { class: 'book-cover', maxWidth: 580 }  %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-green">
+    <section id="credibility" class="section bd-lt bg-white is-medium">
+      <div class="container">
+        <div class="columns">
+
+          <div class="column is-3">
+            <p class="svg-icon has-text-centered">{% include "svg/books.svg" %}</p>
+            <p class="has-text-centered">
+              <strong>+60,000</strong> Copies sold World wide</p>
+          </div>
+
+          <div class="column is-3">
+            <p class="svg-icon has-text-centered">{% include "svg/english-to-chinese.svg" %}</p>
+            <p class="has-text-centered">Translated in <strong>8 languages</strong>
+            </p>
+          </div>
+
+          <div class="column is-3">
+            <p class="svg-icon has-text-centered">{% include "svg/star.svg" %}</p>
+            <p class="has-text-centered">Rated <strong>4.7</strong> on Amazon</p>
+          </div>
+
+          <div class="column is-3">
+            <p class="svg-icon has-text-centered">{% include "svg/brush-alt.svg" %}</p>
+            <p class="has-text-centered">Perfected throughout <strong>all editions</strong>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="reviews" class="bg-green">
+    <section class="section bg-white bd-rd is-medium">
+      <div class="container">
+        <h2 class="title is-2 underline has-text-centered">
+          <span>What people say</span></h2>
+        <div class="columns is-multiline">
+          {% for quote in quotes -%}
+            {% set alt %}{{ quote.name }}'s profile picture{% endset %}
+            <div class="column is-half">
+              <div class="media">
+                <figure class="media-left">
+                  <p class="image is-64x64">
+                    {% responsiveImage quote.picture, alt, { class: 'is-rounded avatar', maxWidth: 64 } %}
+                  </p>
+                </figure>
+                <div class="media-content">
+                  <p>
+                    <strong>{{ quote.name }}</strong>
+                    <small>{{ quote.role }}</small>
+                  </p>
+                  <p class="quote">{{ quote.text }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor -%}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="book-abstract" class="section bg-green bd-lt-rd is-medium">
+    <div class="container">
+      <article>
+        <div class="columns is-centered">
+          <div class="column is-half"></div>
+          <div class="column is-half">
+            <h2 class="title is-2">Learn proven patterns, techniques, and tricks to creating high-performance and scalable Vue 3 applications.</h2>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-half">
+            {% responsiveImage './img/book-unboxed.png', 'Node.js Design Patterns book cover'  %}
+          </div>
+          <div class="column is-half">
+            <h3 class="subtitle is-4">A comprehensive, best-practices guide to building Vue.js apps that can scale along with your business</h3>
+
+
+<p>Building enterprise-ready Vue.js apps entails following best practices for creating high-performance and scalable applications.</p><p> Complete with step-by-step explanations and best practices outlined, this Vue.js book is a must-read for any developer who works with a large Vue.js codebase where performance and scalability are indispensable.</p>
+
+<p>Throughout this book, you'll learn how to configure and set up Vue.js 3 and the composition API and use it to build real-world applications. </p><p>You'll develop the skills to create reusable components and scale performance in Vue.js 3 applications. As you progress, the book guides you in scaling performance with asynchronous lazy loading, image compression, code splitting, and tree shaking.</p><p> Furthermore, you'll see how to use the Restful API, Docker, GraphQL, and different types of testing to ensure that your Vue.js 3 application is scalable and maintainable.</p>
+
+<p>By the end of this book, you'll be well-versed in best practices for implementing Restful API, Docker, GraphQL, and testing methods to build and deploy an enterprise-ready Vue.js 3 application of any scale.</p>
+
+            
+            <div class="buttons">
+              <a class="button is-primary" href="#buy" {{ track("click_abstract_buy") }}>Buy the book</a>
+              <a class="button" href="#sample-chapter" {{ track("click_abstract_sample_chapter") }}>Download the sample chapter</a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div id="book-content" class="bg-green">
+    <section class="section bd-lt bg-white is-medium">
+      <div class="container">
+
+        <h2 class="title is-2 underline has-text-centered">
+          <span>What's in the book</span>
+        </h2>
+
+        <div class="columns is-centered is-gapless">
+          <div class="column is-10">
+            <h3 class="subtitle is-3">Architecting Vue is the book for software engineers who want to <strong>master Frontend, Vue 3</strong> and <strong>implement production and scalable Vue 3 applications</strong> with confidence.</h3>
+          </div>
+        </div>
+
+        <div class="columns is-variable is-8">
+          <div class="column is-one-third">
+            <h4 class="title is-4 is-green">100+ Working examples &amp; many exercises</h4>
+            <p>With hundreds of working examples, you immediately put into practice everything you learn. Every code sample comes with a full step-by-step explanation, so you don't have to spend time to guess how things work.</p>
+          </div>
+
+          <div class="column is-one-third">
+            <h4 class="title is-4 is-green">13 Exquisitely crafted chapters</h4>
+            <p>Every chapter will bring you one step closer to becoming a Vue 3 expert. From the basics of the Vue 3 architecture to how to scale and distribute your enterprise application, the book covers almost every aspect of professional Vue 3 development.</p>
+          </div>
+
+          <div class="column is-one-third">
+            <h4 class="title is-4 is-green">272 Pages packed with knowledge</h4>
+            <p>A good learning experience can't be achieved by only throwing code and notions at the reader. Architecting Vue comes with in-depth explanations and examples, so that even a novice can follow and immediately take advantage of advanced techniques.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="sample-chapter" class="section is-medium">
+    <div class="container bg-green px-6 py-6 bd-all-small">
+      <div class="columns is-gapless">
+        <div class="column is-half">
+          <h2 class="title is-2">Get the free chapter</h2>
+          <h3 class="subtitle is-3">Getting Started with Vue.js 3</h3>
+          <p>Before we start learning how to develop enterprise-ready applications with Vue.js 3, you need to understand Vue 3 and the different features it is bundled with to help you navigate through building scalable and enterprise-ready applications. We will cover the essential aspects of Vue 3 that will directly influence how we develop an enterprise application with Vue.js 3. We also looked at creating your first Vue 3 application using Vite and the fundamental reasons for using Vite instead of the other available options.
+          </p>
+          <div class="mt-4">
+            <!--{% include "convert-kit-form.njk" %}-->
+          </div>
+        </div>
+        <div class="column is-half">
+          {% responsiveImage './img/node-js-design-patterns-open-chapter9.png', 'Node.js Design Patterns chapter 9 behavioral design patterns', { class: "chapter9" }  %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book-chapters" class="section bg-white is-medium">
+    <div class="container">
+      <h2 class="title is-2 underline has-text-centered">
+        <span>Table of Contents</span>
+      </h2>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <h3 class="subtitle has-text-centered">Every chapter has been carefully crafted to explore and master a particular area of 	Vue.js 3 Enterprise-Ready Web Applications</h3>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-8">
+
+          <ol>
+            <li>
+              <h3 class="title is-4">Getting Started with Vue 3</h3>
+              <p>This chapter covers Vue.js, the Options API, the new Vue.js 3, and the Composition API. Thus, it lays a precise part and fosters the understanding of Vue.js. In addition, this chapter will explore the Vue.js 3 composition API in-depth and serve as a guide to understand the other chapters.</p>
+            <p>
+                <a href="#sample-chapter">
+                  <span class="tag is-primary">Free Chapter!</span></a>
+              </p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Using Libraries for Large Scale Application</h3>
+              <p>This chapter is a dive deeper into using Vuex, Vue-router, and Axios to build an Enterprise-Ready App. You will learn how to properly utilize these libraries to develop large-scale applications with maintainability and scalability</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Scaling Performance in Vue.js 3 </h3>
+              <p>In this chapter, we will dive deeper into scaling an extensive Vue application, you will learn how to scale performance with asynchronous lazy loading, image compression, code splitting, tree shaking, and many other tricks to better increase the performance of your Vue.js 3 enterprise-ready application.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Architecture for Large Scale Web Apps</h3>
+              <p>This chapter will learn how to handle a sizable enterprise-ready project, from managing larger file structures to using the Micro Frontend architecture. You will also learn how to handle the internationalization and localization of your Vue.js 3 project.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Intro to GraphQL Apollo Server 2, Queries, Mutations and RESTFUL</h3>
+              <p>In this chapter, you will explore GraphQL, GraphQL Apollo Server 2, Queries, Mutations, and how to integrate these technologies into your Vue.js 3 application. In addition, you will learn how to utilize GraphQL to deliver scalable and high-performing applications.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Build a complete Pinterest Clone with Vue 3 GraphQL</h3>
+              <p>You will learn how to build a complete Pinterest Clone with Vue 3 and GraphQL. You will utilize the knowledge of GraphQL to develop and deliver an enterprise application such as Pinterest using Vue 3 and GraphQL.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Dockerizing Vue App</h3>
+              <p>In this chapter, you will learn the nitty-gritty involved in dockerizing your Vue project. In addition, you will learn best practices and industry-standard to dockerize and deploy an enterprise Vue.js 3 web application. This chapter will also go more practical by dockerizing a full-stack web application and deploying the container to a cloud platform using Docker Compose. You will learn how to handle larger projects with Docker Compose.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Testing and What to Test in Vue 3</h3>
+              <p>In this chapter, you will explore the whole concept of Testing. You will learn what to test from an array of components and methods available. In addition, you will learn best practices and industry standards testing libraries and how to integrate them with Vue.js 3.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Best Practice in Unit Testing</h3>
+              <p>In this chapter, you will explore everything related to Unit Testing. You will learn how to unit test a Vue.js 3 component and the components and pages’ methods. You will also learn Unit Testing tools such as Jest and Mocha and use them to effectively unit Test an enterprise project.</p>
+              
+            </li>
+
+            <li>
+              <h3 class="title is-4">Integration testing in Vue.js 3</h3>
+              <p>In this chapter, you will explore everything related to Integration Testing. You will learn in-depth how to perform an Integration test on a Vue.js 3 component and pages. You will also learn Integration Testing tools such as Vue-Test-Library and how to use them to test an enterprise project effectively.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Industry Standard End-to-End Testing</h3>
+              <p>In this chapter, you will explore everything related to End-to-End Testing. You will learn in-depth how to perform End-to-End testing on a Vue.js 3 component and pages. In addition, you will also learn End-to-End Testing tools such as Cypress, Puppeteer, and how to use them to End-to-End Test an enterprise project effectively.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Deploying Vue.js 3 to the Cloud</h3>
+              <p>In this chapter, you will learn how to deploy Vue.js 3 projects to the AWS Cloud. You will learn the best practices in deploying to AWS. In addition, you will learn how big companies deploy their enterprise Vue applications.</p>
+            </li>
+
+            <li>
+              <h3 class="title is-4">Advanced Vue.js Frameworks</h3>
+              <p>This chapter explores the definitive guide to Nuxt.js. You will learn the nitty-gritty of Nuxt.js and how to build and deliver enterprise SSR projects with Vue.js 3. We will explore the definitive guide to Gridsome. You will learn the nitty-gritty of Gridsome and how to build and deliver enterprise CSR projects with Vue.js 3.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="authors" class="bg-green">
+    <section class="section bd-rd bg-white is-medium">
+      <div class="container">
+        <h2 class="title is-2 underline has-text-centered">
+          <span>Meet the author</span>
+        </h2>
+
+        <div class="columns is-centered">
+          <div class="column is-10">
+            <h3 class="subtitle has-text-centered">Meet Solomon, a passionate Software Engineer with 6+ years of experience in developing scalable and innovative software</h3>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column ">
+            <div class="columns">
+              <div class="column is-one-third"></div>
+              <div class="column is-two-third">
+                <h3 class="title adjust is-3">Solomon Eseme</h3>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column ">
+                {% responsiveImage './img/solomon-eseme.jpg', "Solomon Eseme's picture", {class: 'avatar', maxWidth: 300}  %}
+              </div>
+              <div class="column">
+                <p>Solomon Eseme is an experienced Software Engineer, Content Creator, and Founder of <a title="Visit Masteringbackend" target="_blank" rel="me noopener" href="https://masteringbackend.com/">Mastering Backend</a> with 5+ years of experience working across multiple frontend and backend technologies to design and build high-performing, scalable and innovative applications following best practices and industry standards in a variety of workplaces from start-ups to larger consultancies.</p><p> He started using Vue since it was first integrated with Laravel and never looked back.</p><p> He is also a panelist on the ViewsOnVue podcast and technical writer with VueJs Developers.</p>
+                <ul>
+                  <li>
+                    <a title="Visit Solomon's blog" target="_blank" rel="me noopener" href="https://contentre.io/l/kaperskyguru/">Blog</a>
+                  </li>
+                  <li>
+                    <a title="Visit Solomon's Twitter profile" target="_blank" rel="me noopener noreferrer" href="https://twitter.com/kaperskyguru">Twitter</a>
+                  </li>
+                  <li>
+                    <a title="Visit Solomon's GitHub profile" target="_blank" rel="me noopener noreferrer" href="https://github.com/kaperskyguru">GitHub</a>
+                  </li>
+                  <li>
+                    <a title="Visit Solomon's LinkedIn profile" target="_blank" rel="me noopener noreferrer" href="https://www.linkedin.com/in/solomoneseme/">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="buy" class="section bg-green bd-lt-rd is-medium">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-half">
+          <h2 class="title is-2 has-text-centered">Buy Architecting Vue 3 Enterprise Applications First edition</h2>
+          <h3 class="subtitle is-4 has-text-centered">Architecting Vue 3 Enterprise Applications First edition is available in Print and Kindle editions</h3>
+          <p class="buttons is-centered">
+            <a class="button is-primary" href="https://amzn.to/3mIAVhA" {{ track("click_buy_print") }}>Buy Print edition</a>
+            <a class="button" href="https://amzn.to/3UKTuhC" {{ track("click_buy_kindle") }}>Buy Kindle edition</a>
+          </p>
+        </div>
+        <div class="column is-half">
+          {% responsiveImage './img/node-js-design-patterns-print-ebook-kindle.png', "Solomon Eseme's picture", {maxWidth: 600}  %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="faq" class="bg-green">
+    <section class="section bd-lt bg-white is-medium">
+      <div class="container">
+        <h2 class="title is-2 underline has-text-centered">
+          <span>FAQs</span>
+        </h2>
+
+        <dl class="faq">
+          {% for faq in faqs %}
+            <dt id="{{ faq.id }}">
+              <button aria-expanded="true" aria-controls="{{ faq.id }}-answer" data-faq-id="{{ faq.id }}">
+                <h3 class="subtitle is-4">
+                  {{ faq.question }}</h3>
+              </button>
+            </dt>
+            <dd>
+              <div id="{{ faq.id }}-answer" class="desc">
+                <p class="is-size-7 has-text-right mb-1">
+                  <a title="Permalink to this FAQ" href="#{{ faq.id }}">{{ '&para;' | safe }}</a>
+                </p>
+                {{ faq.answer | markdown | safe }}
+              </div>
+            </dd>
+          {% endfor %}
+        </dl>
+
+      </div>
+    </section>
+  </div>
+</main>
