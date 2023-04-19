@@ -22,8 +22,8 @@ module.exports = function () {
     imageWidth: 1260,
     imageHeight: 630,
     analyticsId: 'G-LNCCTR669E',
-    gtmId: 'GTM-5LS9S8M',
-    facebookAppId: '765341910910483',
+    gtmId: 'GTM-MG5ZGL7',
+    facebookAppId: '756438792839374',
     generator: `${eleventyPackage.name} v${eleventyPackage.version}`
   }
 }
