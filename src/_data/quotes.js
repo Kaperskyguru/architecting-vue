@@ -1,22 +1,22 @@
-'use strict'
+"use strict";
 
 module.exports = [
   {
-    name: 'Adegbenga Agoro',
-    role: 'Co-Founder / CTO at Crenet',
-    picture: './img/people/agoro.jpeg',
+    name: "Adegbenga Agoro",
+    role: "Co-Founder / CTO at Crenet",
+    picture: "./img/people/agoro.jpeg",
     text: `I was fortunate enough to preview the book before its official release, and I must say, it is an outstanding piece of work. The author skillfully delivers clear and actionable insights for both Vue.js and non-Vue.js frontend engineers.
 
     With its timeless principles, this book offers invaluable strategies for scaling your frontend applications, catering to a wide range of developers.
     
-    Kudos to Solomon for creating such an amazing resource!`
+    Kudos to Solomon for creating such an amazing resource!`,
   },
-  // {
-  //   name: 'Gleb Bahmutov',
-  //   role: 'VP of Engineering at Cypress.io',
-  //   picture: './img/people/gleb-bahmutov-node-js.jpg',
-  //   text: 'Wow! This book ... is amazing. After many years of programming with JavaScript, I still have learnt so much  from this book. It covers many topics relevant to large Node.js applications with ease, with many relevant code snippets making the material easily approachable. While not for beginners, it is a great book for anyone looking to take their JS applications to the higher level.'
-  // },
+  {
+    name: "L. Laurents",
+    role: "Software Engineer",
+    picture: "./img/people/640x480.jpeg",
+    text: "Overall I got a lot out of this book, The author is clear and concise. Having purchased many templates over the years, some were basic some were really advanced, bending those to what I needed was a pain, this is a great book for Vue.js in general. If I had read this book before building cloud front ends for over three years It would have saved me some serious frustrations. A good reference book to have around, glad I had the chance to review it.",
+  },
   // {
   //   name: 'Radoslav Stankov',
   //   role: 'Head of engineering at ProductHunt',
@@ -89,4 +89,4 @@ module.exports = [
   //   picture: './img/people/maxim-salnikov-node-js.jpg',
   //   text: 'I have "Node.js Design Patterns" always at hand both when I start quick new projects and when the time comes to refactor the larger and mature ones. It\'s an invaluable and well-structured source of patterns, best practices, and guidelines.  Also, it’s always good to know that particular features are in use in well-known projects - thanks to the “In the wild” section. As a full-stack developer focused on the front-end, I especially enjoyed a chapter about universal JavaScript.'
   // }
-]
+];
