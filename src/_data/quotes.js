@@ -17,12 +17,17 @@ module.exports = [
     picture: "./img/people/640x480.jpeg",
     text: "Overall I got a lot out of this book, The author is clear and concise. Having purchased many templates over the years, some were basic some were really advanced, bending those to what I needed was a pain, this is a great book for Vue.js in general. If I had read this book before building cloud front ends for over three years It would have saved me some serious frustrations. A good reference book to have around, glad I had the chance to review it.",
   },
-  // {
-  //   name: 'Radoslav Stankov',
-  //   role: 'Head of engineering at ProductHunt',
-  //   picture: './img/people/radoslav-stankov-node-js.jpg',
-  //   text: 'Node.js Design Patterns is an excellent resource for learning. I learned a lot of things that I thought I already knew. My favorite part is the Commonjs and ES6 import systems and a lot of the more advanced recipes.'
-  // },
+  {
+    name: "Anton Saienko",
+    role: "Front End Developer (Vue.js) at BuyerBridge",
+    picture: "./img/people/anton-saienko.jpeg",
+    text: `This book is a "must-have" if you want to create Real-Web full scaled Applications!
+    The author covers almost everything you would want to know about Vue. There are chapters about testing, deploying, and even dockerizing your Vue app!
+    
+    The book is easy to follow and provides excellent explanations for all the fundamental concepts. Most importantly that it covers the latest Vue version (Vue 3) and all the latest updates! Of course, each chapter goes with nice examples of code.
+    
+    Overall impressions are very good. This is so far the best book about Vue that I've read so far. I can definitely recommend it to everybody who is willing to learn Vue`,
+  },
   // {
   //   name: 'Ire Aderinokun',
   //   role: 'VP Engineering at BuyCoin Africa',
