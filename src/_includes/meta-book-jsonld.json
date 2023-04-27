@@ -1,8 +1,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Book",
-  "@id": "https://architectingvue.com",
-  "url": "https://architectingvue.com",
+  "@id": "https://enterprisevue.dev",
+  "url": "https://enterprisevue.dev",
   "accessibilityAPI": "ARIA",
   "accessibilityControl": [
     "fullKeyboardControl",
