@@ -21,7 +21,7 @@ module.exports = function () {
     copyright: "Solomon Eseme, Packt Publishing",
     lang: "en",
     locale: "en_US",
-    image: "/img/node-js-design-patterns.jpg",
+    image: "/img/architecting-enterprise-vue.jpeg",
     imageWidth: 1260,
     imageHeight: 630,
     analyticsId: "G-LNCCTR669E",
