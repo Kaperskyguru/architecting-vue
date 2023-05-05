@@ -12,8 +12,6 @@ author_link: https://solomoneseme.com
 tags: ["blog"]
 ---
 
-# Introduction
-
 Vue.js is a popular JavaScript framework that has been used by developers to build user interfaces for web applications. Since its inception, Vue.js has undergone several updates to improve its features and performance. In September 2020, Vue 3 was released, and with this update, significant changes were introduced in the framework. In this blog post, we will look at the key differences and similarities between Vue 3 and Vue 2.
 
 ## Differences
@@ -50,21 +48,21 @@ In Vue 3, this directive has been removed, and instead, developers can use a tem
 
 Another significant change in Vue 3 is the improved handling of slots. In Vue 2, slot content is static, which means that it cannot change after it has been rendered. In Vue 3, slot content can be dynamic, which allows developers to create more flexible and reusable components.
 
-# Similarities
+## Similarities
 
-## Syntax
+### Syntax
 
 One of the main similarities between Vue 3 and Vue 2 is their syntax. Vue.js has always been known for its simplicity, and this is evident in both versions of the framework. The template syntax in Vue 3 is very similar to that of Vue 2, with only a few minor changes. This means that developers who are familiar with Vue 2 will find it easy to transition to Vue 3.
 
 The syntax in both versions is easy to read and write. Both versions allow developers to write HTML-like templates that contain Vue-specific syntax. Developers can use Vue directives such as `v-bind`, `v-if`, and `v-for` to add dynamic functionality to their templates. The syntax for these directives is similar in both versions, making it easy for developers to switch between them.
 
-## Directives
+### Directives
 
 Another similarity between Vue 3 and Vue 2 is the use of directives. Directives are a way of adding functionality to HTML elements in Vue.js. In both versions of the framework, developers can use directives to bind data to HTML elements, conditionally render elements, and handle events. The syntax for directives is also similar in both versions, making it easy for developers to switch between them.
 
 Directives in Vue.js are powerful and flexible, and developers can use them to create complex user interfaces. In both Vue 3 and Vue 2, developers can use directives to bind data to HTML elements, conditionally render elements, and handle events. The syntax for directives is similar in both versions, making it easy for developers to switch between them.
 
-## Component-based Architecture
+### Component-based Architecture
 
 Vue.js is a component-based framework, and this is true for both Vue 3 and Vue 2. Components are reusable and composable elements that can be used to create complex user interfaces. In both versions of the framework, developers can create components that encapsulate their logic and data, making it easier to manage and maintain codebases.
 

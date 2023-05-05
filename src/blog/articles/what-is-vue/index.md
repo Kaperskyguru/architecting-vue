@@ -12,8 +12,6 @@ author_link: https://solomoneseme.com
 tags: ["blog"]
 ---
 
-# What is Vue.js
-
 Vue.js is a popular JavaScript framework that is designed to make building user interfaces easier and more efficient. It was created in 2014 by Evan You and has since become one of the most popular JavaScript frameworks available.
 
 ## Introduction

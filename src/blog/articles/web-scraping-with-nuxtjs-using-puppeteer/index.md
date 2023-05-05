@@ -12,28 +12,13 @@ author_link: https://solomoneseme.com
 tags: ["blog"]
 ---
 
-# Web Scraping with Nuxtjs using Puppeteer
-
-# Outline Takeaways
-1. Web Scraping Fundamentals
-2. Introduction to Puppeteer
-3. Introduction to Nuxtjs, Client-Side and Server-Side (SSR)
-4. How to Configure Puppeteer to communicate with Nuxtjs
-5. Web Scrapping with Puppeteer
-6. Handling Scrapped data with Vuex in Client Side
-7. Displaying data in Nuxt/Vue components
-8. Conclusion
-
-
-# Introduction
-
 Web Scraping with Nuxtjs using Puppeteer is intended to demonstrate how to set up and configure puppeteer to work properly with Nuxtjs and how to use it to Scrape a job listing website and [display them your website](https://masteringbackend.com/jobs).
 
 Since Puppeteer is a Server-side Node package, it becomes very difficult to set it up to work properly with a Client-Side libraries like Vue.js and there are no much tutorials online on how to set this up properly.
 
 This article is intended to demonstrate how i solve the problem in my client’s project using Nuxt.js and Puppeteer.
 
-# Web Scraping Fundamentals
+## Web Scraping Fundamentals
 
 Web scrapping can sound very strange at first but it’s really a very simple term to understand.
 
@@ -41,24 +26,19 @@ It’s a term web scrapping is a technique that describes the extraction of data
 
 Web scrapping automate the manual process of extracting information from websites and storing these information electronically for further processing.
 
-
-## Usage
-
+### Usage
 
 1. Extracting product details of an e-commerce websites such as prices, product name, images etc.
 2. Web scraping is very useful in research as it can help to gather structured data from multiple websites.
 3. Gathering data from different sources for analysis can be automated with web scrapping easily.
 4. It can be used to collect data for testing and training machine learning models.
 
-
-## Method of web scraping
-
+### Method of web scraping
 
 1. **Web scraping softwares:** This is most popular way of web scraping where pre-made softwares are deployed for the purpose of web scraping.
 2. **Writing code:** This is a method where a developer is hired to develop the scraping scripts based on the input of the owner to scrape a specific website.
 
-
-# Introduction to Puppeteer
+## Introduction to Puppeteer
 
 Puppeteer is a Node library that is used to scrape web pages, automate form submission, etc.
 
@@ -66,7 +46,6 @@ It is Google’s official Node library for controlling Google Chrome instance fr
 
 Usage
 Puppeteer can be used for several use cases but i will only list a few below.
-
 
 1. Web page scrapping.
 2. Tracking page load performance.
@@ -78,60 +57,45 @@ Puppeteer can be used for several use cases but i will only list a few below.
 8. Use to render the server-side of a single page app for preview.
 9. etc.
 
+## Building a `JobScrapper` Application with Nuxtjs using Puppeteer
 
-# Building a `JobScrapper` Application with Nuxtjs using Puppeteer
-## Creating a new Nuxt Project
+### Creating a new Nuxt Project
 
 Before we start developing our web scrapper, we need to install and set up Nuxtjs, following the simple step in the [official documentation](https://nuxtjs.org/docs/2.x/get-started/installation) can help speed up the process.
 
 Type in the following commands to set up the project and accept the default set up rules.
 
-
-    
     yarn create nuxt-app <project-name>
-    
 
 After installation, let’s start by creating the different components, stores and pages that will be needed in this project.
 
 Create a components called `jobs` to display a list of all the jobs scraped.
 
-
-    
     cd components
-    
+
     touch Jobs.vue
-    
 
 Next, create a new `job` store in the stores folder to manage our jobs state.
 
-
-    
     cd store
     touch job.js
-    
 
 Lastly, lets create a `jobs` page inside the pages folder for our navigation if needed anyways.
 
-
-    
     cd pages
     touch jobs.vue
-    
 
 Of course, this is limited as your project can be complex and contains plenty components, pages and stores to manage different states.
 
-
-## Installing dependencies.
+### Installing dependencies.
 
 Next is to install all the necessary dependencies needed to scrape pages with nuxtjs and puppeteer.
-
 
     npm i puppeteer net tls
 
 Run the command to install the puppeteer library and other support libraries.
 
-
-## Configuring Puppeteer
+### Configuring Puppeteer
 
 This is the difficult part, I had different issues configuring my puppeteer to work with nuxtjs because nuxtjs is both client and server-side frame work.
 
@@ -141,8 +105,6 @@ I will just go ahead to explain how i get it working on my project.
 
 First, let’s create a new `script.js` file in the root directory and paste in the following codes.
 
-
-    
     const saveFile = require('fs').writeFileSync
     const pkgJsonPath = require.main.paths[0] + '/puppeteer' + '/package.json'
     // console.log(pkgJsonPath)
@@ -153,7 +115,6 @@ First, let’s create a new `script.js` file in the root directory and paste in 
     }
     delete json.browser.ws
     saveFile(pkgJsonPath, JSON.stringify(json, null, 2))
-    
 
 Looking at the script you might understand what it does, if not i will explain.
 
@@ -168,7 +129,6 @@ The `ws` is puppeteer’s web socket that was set to a web socket that does not 
 Now, let’s add the script to our `package.json` file where it will be executed as a `postinstall` script.
 
 Open your `package.json` file and add the following code.
-
 
     .......
     "scripts": {
@@ -186,7 +146,6 @@ Open your `package.json` file and add the following code.
 
 You also need to add the following code into your `package.json` file.
 
-
     .......
     "browser": {
         "fs": false,
@@ -201,7 +160,6 @@ That just sets `fs`, `path`, `os` and `tls` to `false` because these are only ne
 Now that the hard part is off, let’s configure Webpack to deal with puppeteer correctly.
 
 Open your `nuxt.config.js` file and add the following line inside the `build` object.
-
 
     build: {
         extend(config, { isServer, isClient }) {
@@ -223,49 +181,42 @@ Open your `nuxt.config.js` file and add the following line inside the `build` ob
         },
       },
 
-This configuration only requires puppeteer and add it to `externals` array only when Nuxtjs is at client side and set `fs` to empty too. 
+This configuration only requires puppeteer and add it to `externals` array only when Nuxtjs is at client side and set `fs` to empty too.
 
 If you did everything right, your puppeteer should be ready to use with Nuxtjs to scrape pages, if you’re stuck you can [grab the repository here](http://#).
 
 Now we can move to the easy part.
 
+## Web Scrapping
 
-# Web Scrapping
-
-Create file called `JobScrapper.js` and paste in the following code. 
+Create file called `JobScrapper.js` and paste in the following code.
 
 In my project, I was giving list of websites I should scrape to avoid violating any scrapping rules (Just saying 😁 ).
 
-
-    
     const puppeteer = require('puppeteer')
     const jobUrl = // SITE URL HERE
     let page
     let browser
     let cardArr = []
     class Jobs {
-    
+
       // We will add 3 methods here
-    
+
       // Initializes and create puppeteer instance
       static async init(){}
-    
+
       // Visits the page, retrieves the job
       static async resolver() {}
-    
+
       static async getJobs() {}
-    
+
     }
     export default Jobs
-    
 
+### Create the Init method
 
-## Create the Init method
-
-
-    
       static async init() {
-    
+
         browser = await puppeteer.launch({
           // headless: false,
           args: [
@@ -279,22 +230,18 @@ In my project, I was giving list of websites I should scrape to avoid violating 
             '--disable-gpu',
           ],
         })
-    
+
         page = await browser.newPage()
         await Promise.race([
           await page.goto(jobUrl, { waitUntil: 'networkidle2' }).catch(() => {}),
           await page.waitForSelector('.search-card').catch(() => {}),
         ])
       }
-    
 
 The `init` function initialises puppeteer with several configurations, creates a new page with `browser.newPage()`, visit our URL with `await page.goto(………)`, and wait for the page to load successfully with `await page.waitForSelector(…..)`
 
+### Create a Resolver method.
 
-## Create a Resolver method.
-
-
-    
       static async resolve() {
         await this.init()
         const jobURLs = await page.evaluate(() => {
@@ -331,15 +278,12 @@ The `init` function initialises puppeteer with several configurations, creates a
         return jobURLs
       }
     }
-    
 
 This method does all the job.
 
 Firstly, it selects all the Jobs listed, convert it to javascript array and loop through each of them while retrieving the data needed.
 
-
-## Create a getJobs method
-
+### Create a getJobs method
 
     static async getJobs() {
         const jobs = await this.resolve()
@@ -352,16 +296,14 @@ Firstly, it selects all the Jobs listed, convert it to javascript array and loop
 
 The method simply returns the job array from the `resolver` method and closes the browser.
 
-
-# Creating Vuex action
+## Creating Vuex action
 
 Next, we are going to set up our Vuex store to retrieve the jobs each time we dispatch the `getJobs` action and store them to state.
 
 Open the `job` file and add the following codes.
 
-
     import JobScrapper from '~/JobScrapper'
-    
+
     // Action
     async getJobs({ commit }) {
         const data = await JobScrapper.getJobs();
@@ -370,31 +312,29 @@ Open the `job` file and add the following codes.
           return data.jobs
         }
     }
-    
+
     // Mutation
     STORE_JOBS(state, payload) {
         state.jobs = payload.jobs
         state.total_jobs = payload.total_jobs
     },
-    
+
     // Getter
     export const getters = {
       getJobs: (state) => () => {
         return state.jobs
       },
     }
-    
+
     // State
     export const state = () => ({
       jobs: [],
       total_jobs: 0,
     })
 
-
-# Displaying Jobs
+## Displaying Jobs
 
 Open `pages/jobs.vue` file and add the following codes.
-
 
     <template>
       <div class="row mt-5">
@@ -410,7 +350,7 @@ Open `pages/jobs.vue` file and add the following codes.
         </div>
       </div>
     </template>
-    
+
     <script>
     export default {
       async asyncData({ store }) {
@@ -432,7 +372,6 @@ Let’s me show you how to do that.
 
 Create an `index.js` file inside the `store` folder and add the following codes.
 
-
     async nuxtServerInit({ dispatch }) {
         try {
           await dispatch('job/getJobs')
@@ -443,9 +382,7 @@ This will scrape the jobs and save it to state, you can then use `…mapState` o
 
 In my project, I use the `nuxtServerInit` approach and `…mapState` in any of the components I wan to display the job.
 
-
-## Jobs Component
-
+### Jobs Component
 
     <template>
       <section>
@@ -462,7 +399,7 @@ In my project, I use the `nuxtServerInit` approach and `…mapState` in any of t
             </div>
             <div v-else class="row mb-1 mt-5">No Jobs at this time</div>
         ..........
-    
+
       </section>
     </template>
     <script>
@@ -478,7 +415,6 @@ In my project, I use the `nuxtServerInit` approach and `…mapState` in any of t
     }
     </script>
     <style></style>
-    
 
 That’s all.
 
@@ -492,13 +428,14 @@ I have a better approach on how to [handle web scraping with Nuxtjs using Node/e
 
 Consider joining our newsletter to never miss a thing when it drops.
 
+## References
 
-# References
 1. https://flaviocopes.com/puppeteer/
 2. https://www.webharvy.com/articles/what-is-web-scraping.html
 3. https://masteringjs.io/tutorials/fundamentals/puppeteer
-# Conclusion:
 
-Congratulations for making it this far, by now you should have a deep understanding of web scrapping using puppeteer in Nuxt.js. 
+## Conclusion:
+
+Congratulations for making it this far, by now you should have a deep understanding of web scrapping using puppeteer in Nuxt.js.
 
 You should also have built and completed the JobScrapper Project.
