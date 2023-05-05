@@ -2,8 +2,8 @@
 date: 2023-05-05T15:30:00
 updatedAt: 2023-05-05T15:30:00
 title: Is Vue easier than JavaScript?
-permalink: /blog/is-vue-easier-than-javaScript/
-description: "Is Vue easier than JavaScript?" is a common question among web developers, especially those who are new to front-end development. 
+permalink: /blog/is-vue-easier-than-javascript/
+description: Is Vue easier than JavaScript? is a common question among web developers, especially those who are new to front-end development.
 layout: article
 author: Solomon Eseme
 author_profile_pic: /static/solomon-eseme.jpg
