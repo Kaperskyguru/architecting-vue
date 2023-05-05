@@ -7,7 +7,6 @@ description: Learn the differences and similarities between Vue 3 and Vue 2.
 layout: article
 author: Solomon Eseme
 author_profile_pic: /static/solomon-eseme.jpg
-canonical: https://masteringbackend.com/posts/web-scraping-with-nuxtjs-using-puppeteer/
 author_link: https://solomoneseme.com
 tags: ["blog"]
 ---

@@ -7,7 +7,6 @@ description: Learn what is Vue.js, the benefits and understand one of the most p
 layout: article
 author: Solomon Eseme
 author_profile_pic: /static/solomon-eseme.jpg
-canonical: https://masteringbackend.com/posts/web-scraping-with-nuxtjs-using-puppeteer/
 author_link: https://solomoneseme.com
 tags: ["blog"]
 ---
