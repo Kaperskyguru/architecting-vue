@@ -4,14 +4,14 @@ const eleventyPackage = require("@11ty/eleventy/package.json");
 
 module.exports = function () {
   return {
-    domain: "www.enterprisevue.dev",
-    url: "https://www.enterprisevue.dev",
+    domain: "enterprisevue.dev",
+    url: "https://enterprisevue.dev",
     name: "Architecting Vue.js 3 Enterprise-Ready Web Applications",
     title:
       "Architecting Vue.js 3 Enterprise-Ready Web Applications First Edition by Solomon Eseme",
     description:
       "A book to learn how to Build and deliver scalable and high-performance, enterprise-ready applications with Vue and JavaScript",
-    blogUrl: "https://www.enterprisevue.dev/blog",
+    blogUrl: "https://enterprisevue.dev/blog",
     blogTitle: "Architecting Vue.js 3 Enterprise-Ready Web Applications Blog",
     blogDescription:
       "From the authors of Architecting Vue.js 3 Enterprise-Ready Web Applications, useful bits to enrich your Vue.js knowledge",
