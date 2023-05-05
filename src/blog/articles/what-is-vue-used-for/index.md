@@ -17,7 +17,7 @@ Vue.js is a popular JavaScript framework that is used for building dynamic user 
 
 Vue.js is commonly used for building dynamic user interfaces for web applications. With Vue.js, developers can create reusable UI components that can be easily integrated into different parts of the application.
 
-!['A screenshot showing a dynamic webpage'](./blog/articles/what-is-vue-used-for/images/dynamic_webpage.gif)
+!['A screenshot showing a dynamic webpage'](/dynamic_webpage.gif)
 
 <!-- {% responsiveImage './blog/articles/what-is-vue-used-for/images/dynamic_webpage.gif', 'A screenshot showing a dynamic webpage', { maxWidth: 848 }  %} -->
 
