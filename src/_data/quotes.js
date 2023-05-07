@@ -28,12 +28,12 @@ module.exports = [
     
     Overall impressions are very good. This is so far the best book about Vue that I've read so far. I can definitely recommend it to everybody who is willing to learn Vue`,
   },
-  // {
-  //   name: 'Ire Aderinokun',
-  //   role: 'VP Engineering at BuyCoin Africa',
-  //   picture: './img/people/ire-aderinokun-node-js.jpg',
-  //   text: 'Node.js Design Patterns is a really in-depth look into the world of Node.js. Everything you ever wanted to know, and more! It’s very comprehensive, and gets into the details of how Node.js works. It’s a perfect book for anyone who already knows a bit about Node.js, and is looking to deepen their knowledge.'
-  // },
+  {
+    name: "Pavan",
+    role: "Software Engineer",
+    picture: "./img/people/640x480.jpeg",
+    text: "Clear and Concise introduction on how to build Enterprise Web Applications. Overall this is a good book and I give it 4 starts. The writing is friendly and not too technical, which makes it accessible for a beginner. The book is not too big and acts as a good starting point for developing large scale frontend applications.",
+  },
   // {
   //   name: 'Ersel Aker',
   //   role: 'Co-founder & CTO at JustFulfil',
