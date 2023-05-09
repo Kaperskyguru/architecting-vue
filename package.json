@@ -9,7 +9,7 @@
   "engineStrict": true,
   "scripts": {
     "clean": "rm -rf build",
-    "test": "eslint src",
+    "test": "eslint src --fix",
     "build:assets": "NODE_ENV=production webpack",
     "build:eleventy": "NODE_ENV=production eleventy",
     "watch:assets": "webpack --watch",

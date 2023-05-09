@@ -15,10 +15,10 @@ module.exports = () => {
 
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
 
-        if ($target.style.display === "none") {
-          $target.style.display = "block"
+        if ($target.style.display === 'none') {
+          $target.style.display = 'block'
         } else {
-          $target.style.display = "none";
+          $target.style.display = 'none'
         }
 
         el.classList.toggle('is-active')

@@ -4,7 +4,7 @@ module.exports = [
   {
     id: 'faq-who-is-this-book-for',
     question: 'Who is this book for?',
-    answer: `The Vue.js 3 book is for Vue.js developers and professional frontend developers who want to build high-performance, production-grade, and highly scalable enterprise Vue.js apps from design to deployment. The book assumes working knowledge of Vue.js and JavaScript programming.`
+    answer: 'The Vue.js 3 book is for Vue.js developers and professional frontend developers who want to build high-performance, production-grade, and highly scalable enterprise Vue.js apps from design to deployment. The book assumes working knowledge of Vue.js and JavaScript programming.'
   },
   {
     id: 'faq-is-this-book-for-me',
@@ -20,12 +20,12 @@ Some good FREE resources you could check out are [Eloquent JavaScript](https://a
   {
     id: 'faq-main-topics',
     question: 'What are the main topics I will learn in this book?',
-    answer: `This book will teach you how to ***Implement Vue.js 3 to create Vue.js application with improved performance***, you will explore the ***Vue.js 3 composition API*** in-depth while building your enterprise application while ensuring the scalability and maintainability of your apps with different types of testing`
+    answer: 'This book will teach you how to ***Implement Vue.js 3 to create Vue.js application with improved performance***, you will explore the ***Vue.js 3 composition API*** in-depth while building your enterprise application while ensuring the scalability and maintainability of your apps with different types of testing'
   },
   {
     id: 'faq-what-to-learn',
     question: 'What will I learn in this book?',
-    answer: `This book will learn how to scale your app's performance in Vue.js 3 using best practices, Implement testing strategies for large-scale Vue.js codebase, Manage large file structures using the micro frontend architecture, Discover the industry standard to Dockerize and deploy an enterprise Vue.js 3 web application, Use GraphQL to deliver scalable and high-performing applications, and Explore various testing libraries and how to integrate them with Vue.js 3`
+    answer: 'This book will learn how to scale your app\'s performance in Vue.js 3 using best practices, Implement testing strategies for large-scale Vue.js codebase, Manage large file structures using the micro frontend architecture, Discover the industry standard to Dockerize and deploy an enterprise Vue.js 3 web application, Use GraphQL to deliver scalable and high-performing applications, and Explore various testing libraries and how to integrate them with Vue.js 3'
   },
   {
     id: 'faq-download-for-free',
