@@ -418,7 +418,7 @@ In my project, I use the `nuxtServerInit` approach and `…mapState` in any of t
 
 That’s all.
 
-Except you want to see my `Job` component, then [clone the repository here](http://#), everything can be found there.
+Except you want to see my `Job` component, then [clone the repository here](https://github.com/Kaperskyguru/nuxt-web-scraping-puppeteer), everything can be found there.
 
 P:S
 
