@@ -424,7 +424,7 @@ P:S
 
 This method of web scraping with Nuxtjs using puppeteer has many work arounds and may be a little difficult to understand for beginners, though it works properly because I have used it in my projects.
 
-I have a better approach on how to [handle web scraping with Nuxtjs using Node/express and puppeteer](http://#), I will be writing about it too.
+I have a better approach on how to [handle web scraping with Nuxtjs using Node/express and puppeteer](https://masteringbackend.com/posts/web-scraping-with-nuxtjs-using-puppeteer/), I will be writing about it too.
 
 Consider joining our newsletter to never miss a thing when it drops.
 
