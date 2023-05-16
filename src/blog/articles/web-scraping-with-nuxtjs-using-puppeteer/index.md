@@ -183,7 +183,7 @@ Open your `nuxt.config.js` file and add the following line inside the `build` ob
 
 This configuration only requires puppeteer and add it to `externals` array only when Nuxtjs is at client side and set `fs` to empty too.
 
-If you did everything right, your puppeteer should be ready to use with Nuxtjs to scrape pages, if you’re stuck you can [grab the repository here](http://#).
+If you did everything right, your puppeteer should be ready to use with Nuxtjs to scrape pages, if you’re stuck you can [grab the repository here](https://github.com/Kaperskyguru/nuxt-web-scraping-puppeteer).
 
 Now we can move to the easy part.
 
