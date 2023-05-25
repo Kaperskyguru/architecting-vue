@@ -89,7 +89,7 @@ In Vue 3 Composition API, the `beforeCreate` and `created` hooks are replaced wi
 
 Here’s a code snippet showing how to explicitly call a function or snippet of code in the setup method without using the `beforeCreate` or `created` hooks in Vue 3 composition API:
 
-```jsx
+```js
 <script>
 import { ref } from 'vue'
 
@@ -106,7 +106,7 @@ export default {
 
 The same goes for using the compile-time syntactic sugar `<script setup>`. Here’s an example:
 
-```jsx
+```js
 <script setup>
   const val = ref('hello') // This will be called automatically by default
   console.log('Value of val is: ' + this.val)
@@ -129,7 +129,7 @@ The `onMounted` hook is the same as the `mounted` hook in Options API except for
 
 Below is a code snippet that shows how to use `onMounted` hook in composition API.
 
-```jsx
+```js
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -161,7 +161,7 @@ This means that data from your state, `ref`, `reactive` are already initialized 
 
 Here’s an example of how to use `onBeforeMounted` hook:
 
-```jsx
+```js
 <script setup>
 import { ref, onBeforeMounted } from 'vue'
 
@@ -193,7 +193,7 @@ When working with Vue, you can update reactive data and see the update immediate
 
 Here’s an example of how to use `onBeforeUpdate` hook:
 
-```jsx
+```js
 <script setup>
 import { ref, onBeforeUpdate } from 'vue'
 
@@ -213,7 +213,7 @@ The `onUpdated` hook is special and frequently used because it's called right af
 
 Here’s an example of how to use `onUpdated`hook:
 
-```jsx
+```js
 <script setup>
 import { ref, onUpdated } from 'vue'
 
@@ -243,9 +243,9 @@ The `onActivated` hook is a new addition in Vue 3. It is very special and helps 
 
 It is called after a component instance is inserted back into the DOM tree from a cache. Vue caches components when you use the KeepAlive tag as shown below:
 
-```jsx
+```html
 <KeepAlive>
-	<component :is="view"></component>
+  <component :is="view"></component>
 </KeepAlive>
 ```
 
@@ -253,7 +253,7 @@ Any component that is cached as shown goes into the _deactivated_ state when the
 
 Here’s an example of how to use `onActivated`hook:
 
-```jsx
+```js
 <script setup>
   import {onActivated} from 'vue' onActivated(() =>{" "}
   {console.log("Activated hook is called")})
@@ -286,7 +286,7 @@ This is a very important hook used to capture errors within a component in real-
 
 Here’s an example of how to use `onErrorCaptured`hook:
 
-```jsx
+```js
 <script setup>
 		import { ref, onBeforeUpdate } from 'vue'
 
@@ -306,7 +306,7 @@ Here’s an example of how to use `onErrorCaptured`hook:
 
 The `onRenderTracked` hook is a debugging hook that gets called every time a reactive dependency is tracked. Here’s an example of how to use the `onRenderTracked` hook for debugging.
 
-```jsx
+```js
 <script setup>
   import {(ref, onRenderTracked)} from 'vue' const num = ref(0) const num2 =
   ref(0) // It will be called twice, once for num and once for num2
@@ -316,11 +316,9 @@ The `onRenderTracked` hook is a debugging hook that gets called every time a rea
 
 It is important to note that this hook should only be used in development and not in production.
 
-\***\*onRenderTriggered\*\***
-
 The `onRenderTriggered` hook is also a debugging hook that gets called when a reactive dependency is updated. Here’s an example of how to use the `onRenderTriggered` hook for debugging.
 
-```jsx
+```js
 <script setup>
   import {(ref, onRenderTracked)} from 'vue' const num = ref(0) // It will be
   called once the num is updated onRenderTriggered((event) =>{" "}
@@ -338,13 +336,11 @@ As of the time of writing, Vue only has one hook that falls under this category:
 
 1. onServerPrefetch
 
-\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***onServerPrefetch\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
-
 The `onServerPrefetch` hook is a server-side hook that gets called before the component instance is to be rendered on the server. This hook is perfect when performing server-only data fetching since it is only called during server-side rendering.
 
 Here’s an example of how to use the `onServerPrefetch` hook for server-side logic:
 
-```jsx
+```js
 <script setup>
   import {(ref, onServerPrefetch)} from 'vue' const data = ref(null)
   onServerPrefetch(async () =>{" "}
@@ -366,11 +362,9 @@ The destruction hooks are used for the removal of components, cleaning up compon
 2. onBeforeUnmount
 3. onDeactivated
 
-\***\*onUnmounted\*\***
-
 The `onUnmounted` hook is called after the component has been unmounted. It is used to clean up manually created side effects such as timers, DOM event listeners, or server connections. Here’s an example of `onUnmounted` hook
 
-```jsx
+```js
 <script setup>
   import {onUnmounted} from 'vue' let intervalId onMounted(() =>{" "}
   {
@@ -388,7 +382,7 @@ In the code snippet above, we created a timer using the `onMounted` hook and cle
 
 The `onBeforeUnmount` hook is the opposite of `onBeforeMount` hook. It is called right before a component instance is to be unmounted. Here’s an example of `onBeforeUnmounted` hook:
 
-```jsx
+```js
 <script setup>
   import {onUnmounted} from 'vue' let intervalId onBeforeMount(() =>{" "}
   {
@@ -408,7 +402,7 @@ The `onDeactivated` hook is the opposite of `onActivated` hook discussed earlier
 
 Here’s an example of `onDeactivated` hook:
 
-```jsx
+```js
 <script setup>
   import {onDeactivated} from 'vue' onDeactivated(() =>{" "}
   {console.log("Deactivated hook is called")})
