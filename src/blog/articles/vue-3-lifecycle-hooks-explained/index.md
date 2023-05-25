@@ -6,7 +6,7 @@ permalink: /blog/vue-3-lifecycle-hooks-explained/
 description: In this article, you will learn the different lifecycle hooks in Vue 3, how to use them, and how to integrate them into your enterprise application.
 layout: article
 author: Solomon Eseme
-author_profile_pic: /static/solomon-eseme.jpeg
+author_profile_pic: /static/solomon-eseme.jpg
 author_link: https://solomoneseme.com
 tags: ["blog"]
 ---
