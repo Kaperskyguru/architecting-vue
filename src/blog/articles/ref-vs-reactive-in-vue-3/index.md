@@ -21,16 +21,16 @@ In this article, we'll explore the differences between refs and reactive objects
 
 In Vue 3, Ref is a function that can be used to create a reactive reference to a value. Ref is similar to a reactive property in Vue 2 but with some key differences. When you use Ref to create a reference to a value, you can access and update that value using the value property. Here is an example:
 
-```
-import { ref } from 'vue'
+```js
+import { ref } from "vue";
 
-const count = ref(0)
+const count = ref(0);
 
-console.log(count.value) // 0
+console.log(count.value); // 0
 
-count.value++
+count.value++;
 
-console.log(count.value) // 1
+console.log(count.value); // 1
 ```
 
 In this example, we have used the Ref function to create a reference to a value of 0. We can access and update the value using the value property of the count object. When we update the value using the value property, Vue will automatically trigger a reactivity update and update any components that are using the count reference.
@@ -39,19 +39,19 @@ In this example, we have used the Ref function to create a reference to a value 
 
 In Vue 3, Reactive is a function that can be used to create a reactive object. A reactive object is an object that can be observed for changes, and any changes to the object will trigger a reactivity update. Here is an example:
 
-```
-import { reactive } from 'vue'
+```js
+import { reactive } from "vue";
 
 const state = reactive({
   count: 0,
-  name: 'John'
-})
+  name: "John",
+});
 
-console.log(state.count) // 0
+console.log(state.count); // 0
 
-state.count++
+state.count++;
 
-console.log(state.count) // 1
+console.log(state.count); // 1
 ```
 
 In this example, we have used the Reactive function to create a reactive object called a state. The state object has two properties, count and name. We can access and update the value of the count property directly, and any changes to the count property will trigger a reactivity update.
@@ -84,8 +84,8 @@ Now that we understand what Refs and Reactives are, let's see how we can use the
 
 We can use Refs to create reactive variables in our Vue components. To use Refs, we import the **`ref`** function from Vue and use it to create a Ref.
 
-```
-import { ref } from 'vue';
+```js
+import { ref } from "vue";
 
 export default {
   setup() {
@@ -104,7 +104,7 @@ In the above example, we create a Ref called **`count`** and initialize it with 
 
 We can then use this Ref in our template like this:
 
-```
+```js
 <template>
   <div>
     Count: {{ count }}
@@ -119,15 +119,14 @@ When the **`increment`** method is called, the value of **`count`** will be upda
 
 We can use Reactive to create reactive objects in our Vue components. To use Reactive, we import the **`reactive`** function from Vue and use it to create a Reactive.
 
-```
-javascriptCopy code
-import { reactive } from 'vue';
+```js
+import { reactive } from "vue";
 
 export default {
   setup() {
     const state = reactive({
       count: 0,
-      message: 'Hello!',
+      message: "Hello!",
     });
     return {
       state,
@@ -137,15 +136,13 @@ export default {
     };
   },
 };
-
 ```
 
 In the above example, we create a Reactive called **`state`** with two properties: **`count`** and **`message`**. We then return an object with the **`state`** Reactive and a method called **`increment`** that increments the value of **`count`** by 1.
 
 We can then use this Reactive in our template like this:
 
-```
-htmlCopy code
+```js
 <template>
   <div>
     Count: {{ state.count }}
@@ -164,15 +161,15 @@ In general, we should use Refs for primitive values like numbers, booleans, and 
 
 One example is when we have a large object with many properties, but we only need to track changes to one property. In this case, we can create a Ref for that one property instead of creating a Reactive for the entire object.
 
-```
-import { ref } from 'vue';
+```js
+import { ref } from "vue";
 
 export default {
   setup() {
     const user = {
-      name: 'John Doe',
+      name: "John Doe",
       age: 30,
-      email: 'john@example.com',
+      email: "john@example.com",
       // ... many more properties ...
     };
     const email = ref(user.email);
@@ -204,7 +201,7 @@ In general, you should use refs for manipulating the DOM directly and reactive o
 
 However, there are cases where you may want to use a ref to store reactive data. In those cases, you can create a reactive object and assign it to a ref using the **`toRef()`** function:
 
-```
+```js
 <template>
   <div>
     <input type="text" v-model="text" />

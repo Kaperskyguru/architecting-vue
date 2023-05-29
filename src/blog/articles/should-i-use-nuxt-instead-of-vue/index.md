@@ -69,7 +69,7 @@ Let's take a look at some code snippets to compare Vue.js and Nuxt.js.
 
 1. Creating a Vue.js component:
 
-```
+```js
 <template>
   <div>
     <h1>{{ title }}</h1>
@@ -92,7 +92,7 @@ export default {
 
 1. Creating a Nuxt.js page:
 
-```
+```js
 <template>
   <div>
     <h1>{{ title }}</h1>

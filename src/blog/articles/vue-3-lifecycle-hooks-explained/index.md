@@ -49,17 +49,17 @@ The `beforeCreate` hook is called before initializing all of the reactive data a
 
 Here’s a code snippet showing how to implement the `beforeCreate` hook in the Options API.
 
-```
+```js
 export default {
   data() {
     return {
-      val: 'hello',
-    }
+      val: "hello",
+    };
   },
   beforeCreate() {
-    console.log('Value of val is: ' + this.val)
+    console.log("Value of val is: " + this.val);
   },
-}
+};
 ```
 
 In Options API, the `beforeCreate` hook is very important and is useful when you want to call out API or logic that initializes data or does not need to assign data
@@ -70,17 +70,17 @@ The `created` hook is responsible for initializing all of the reactive data and 
 
 Here’s a code snippet that shows how to implement `created` hook in Options API:
 
-```
+```js
 export default {
   data() {
     return {
-      val: 'hello',
-    }
+      val: "hello",
+    };
   },
   created() {
-    console.log('Value of val is: ' + this.val)
+    console.log("Value of val is: " + this.val);
   },
-}
+};
 ```
 
 The `created` hook is also useful for initialization or calling APIs or logic that needs to be called once before the component is mounted and most important the `created` hook can assign data which makes it important to generate your initial data for your component.
@@ -243,7 +243,7 @@ The `onActivated` hook is a new addition in Vue 3. It is very special and helps 
 
 It is called after a component instance is inserted back into the DOM tree from a cache. Vue caches components when you use the KeepAlive tag as shown below:
 
-```html
+```js
 <KeepAlive>
   <component :is="view"></component>
 </KeepAlive>

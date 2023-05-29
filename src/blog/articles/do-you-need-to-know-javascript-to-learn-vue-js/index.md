@@ -11,8 +11,6 @@ author_link: https://solomoneseme.com
 tags: ["blog"]
 ---
 
-# Do You Need to Know JavaScript to Learn Vue.js?
-
 Vue.js is a popular JavaScript framework for building dynamic and responsive user interfaces. As a Vue developer, you might wonder if you need to have a strong understanding of JavaScript to learn Vue.js. In this article, we will explore the relationship between Vue.js and JavaScript and whether or not it is necessary to know JavaScript to learn Vue.js.
 
 ## **Vue.js and JavaScript**

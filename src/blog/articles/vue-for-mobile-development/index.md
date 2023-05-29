@@ -81,7 +81,7 @@ To demonstrate how to build a mobile app with Vue and NativeScript, we will crea
 
 To get started, we need to set up our development environment. We will need to install Node.js and the NativeScript CLI.
 
-```
+```bash
 # Install Node.js
 https://nodejs.org/en/
 
@@ -91,7 +91,7 @@ npm install -g nativescript
 
 Once we have installed the required tools, we can create a new NativeScript project:
 
-```
+```bash
 # Create a new NativeScript project with Vue
 tns create my-app --template nativescript-vue-template
 cd my-app
@@ -101,7 +101,7 @@ cd my-app
 
 By running this command, an emulator for iOS devices is launched, and it continuously monitors any changes made to the app files.
 
-```
+```bash
 # for iPhone
 tns run ios --watch
 

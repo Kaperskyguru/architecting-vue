@@ -25,13 +25,13 @@ Once you have Node.js and npm installed, you can proceed to install the Vue CLI.
 
 To install the Vue CLI, open your terminal and run the following command:
 
-```
+```bash
 npm install -g @vue/cli
 ```
 
 This command will install the Vue CLI globally on your machine. Once the installation is complete, you can check the version of the Vue CLI by running the following command:
 
-```
+```bash
 vue --version
 ```
 
@@ -41,7 +41,7 @@ This command should output the version of the Vue CLI that you just installed.
 
 To create a new Vue.js project, navigate to the directory where you want to create the project and run the following command:
 
-```
+```bash
 vue create my-project
 ```
 
@@ -53,7 +53,7 @@ Once you have selected your preset, the Vue CLI will install the necessary depen
 
 Let's take a quick look at the project structure that was created for us:
 
-```
+```js
 my-app/
   |- node_modules/
   |- public/

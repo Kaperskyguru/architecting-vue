@@ -25,44 +25,42 @@ The main building blocks of the vue-router are routes, which define the mapping 
 
 Here is an example of a basic route definition in Vue:
 
-```
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+```js
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "./views/Home.vue";
+import About from "./views/About.vue";
 
 const routes = [
   {
-    path: '/',
-    component: Home
+    path: "/",
+    component: Home,
   },
   {
-    path: '/about',
-    component: About
-  }
-]
+    path: "/about",
+    component: About,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
 
-export default router
-
+export default router;
 ```
 
 In this example, we define two routes: one for the home page, which maps to the **`Home`** component, and one for the about page, which maps to the **`About`** component.
 
 To use the router in our Vue app, we need to mount it to the root Vue instance using the **`use`** method:
 
-```
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-const app = createApp(App)
-app.use(router)
-app.mount('#app')
-
+const app = createApp(App);
+app.use(router);
+app.mount("#app");
 ```
 
 This sets up the router so that it can be used within our Vue components.
@@ -73,21 +71,20 @@ Dynamic routes are a powerful feature of the vue-router that allows us to define
 
 For example, suppose we have a list of blog posts, and we want to create a route for each individual post. We can define a dynamic route with a parameter for the post ID like this:
 
-```
+```js
 const routes = [
   {
-    path: '/blog/:id',
-    component: BlogPost
-  }
-]
-
+    path: "/blog/:id",
+    component: BlogPost,
+  },
+];
 ```
 
 In this example, the **`:id`** segment is a dynamic segment that will match any value in the URL path after **`/blog/`**. When a user navigates to a URL that matches this route, the **`BlogPost`** component will be rendered with the **`id`** parameter as a prop.
 
 We can access the dynamic segment parameter in the component using the **`$route.params`** object. In the **`BlogPost`** component, we can use the **`id`** parameter to fetch the corresponding blog post data and display it:
 
-```
+```js
 <template>
   <div>
     <h1>{{ post.title}}</h1>

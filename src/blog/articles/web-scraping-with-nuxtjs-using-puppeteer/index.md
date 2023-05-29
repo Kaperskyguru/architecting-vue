@@ -71,19 +71,25 @@ After installation, let’s start by creating the different components, stores a
 
 Create a components called `jobs` to display a list of all the jobs scraped.
 
+```bash
     cd components
 
     touch Jobs.vue
+```
 
 Next, create a new `job` store in the stores folder to manage our jobs state.
 
+```bash
     cd store
     touch job.js
+```
 
 Lastly, lets create a `jobs` page inside the pages folder for our navigation if needed anyways.
 
+```bash
     cd pages
     touch jobs.vue
+```
 
 Of course, this is limited as your project can be complex and contains plenty components, pages and stores to manage different states.
 
@@ -91,7 +97,9 @@ Of course, this is limited as your project can be complex and contains plenty co
 
 Next is to install all the necessary dependencies needed to scrape pages with nuxtjs and puppeteer.
 
+```bash
     npm i puppeteer net tls
+```
 
 Run the command to install the puppeteer library and other support libraries.
 
@@ -105,16 +113,18 @@ I will just go ahead to explain how i get it working on my project.
 
 First, let’s create a new `script.js` file in the root directory and paste in the following codes.
 
-    const saveFile = require('fs').writeFileSync
-    const pkgJsonPath = require.main.paths[0] + '/puppeteer' + '/package.json'
-    // console.log(pkgJsonPath)
-    const json = require(pkgJsonPath)
-    // eslint-disable-next-line no-prototype-builtins
-    if (!json.hasOwnProperty('browser')) {
-      json.browser = {}
-    }
-    delete json.browser.ws
-    saveFile(pkgJsonPath, JSON.stringify(json, null, 2))
+```js
+const saveFile = require("fs").writeFileSync;
+const pkgJsonPath = require.main.paths[0] + "/puppeteer" + "/package.json";
+// console.log(pkgJsonPath)
+const json = require(pkgJsonPath);
+// eslint-disable-next-line no-prototype-builtins
+if (!json.hasOwnProperty("browser")) {
+  json.browser = {};
+}
+delete json.browser.ws;
+saveFile(pkgJsonPath, JSON.stringify(json, null, 2));
+```
 
 Looking at the script you might understand what it does, if not i will explain.
 
@@ -130,6 +140,7 @@ Now, let’s add the script to our `package.json` file where it will be executed
 
 Open your `package.json` file and add the following code.
 
+```js
     .......
     "scripts": {
         "dev": "nuxt",
@@ -143,9 +154,11 @@ Open your `package.json` file and add the following code.
         "postinstall": "node script"
       },
     ....
+```
 
 You also need to add the following code into your `package.json` file.
 
+```js
     .......
     "browser": {
         "fs": false,
@@ -154,6 +167,7 @@ You also need to add the following code into your `package.json` file.
         "tls": false
       }
     .......
+```
 
 That just sets `fs`, `path`, `os` and `tls` to `false` because these are only needed in the server side of things.
 
@@ -161,6 +175,7 @@ Now that the hard part is off, let’s configure Webpack to deal with puppeteer 
 
 Open your `nuxt.config.js` file and add the following line inside the `build` object.
 
+```js
     build: {
         extend(config, { isServer, isClient }) {
           config.externals = config.externals || {}
@@ -180,6 +195,7 @@ Open your `nuxt.config.js` file and add the following line inside the `build` ob
           return config
         },
       },
+```
 
 This configuration only requires puppeteer and add it to `externals` array only when Nuxtjs is at client side and set `fs` to empty too.
 
@@ -193,6 +209,7 @@ Create file called `JobScrapper.js` and paste in the following code.
 
 In my project, I was giving list of websites I should scrape to avoid violating any scrapping rules (Just saying 😁 ).
 
+```js
     const puppeteer = require('puppeteer')
     const jobUrl = // SITE URL HERE
     let page
@@ -278,6 +295,7 @@ The `init` function initialises puppeteer with several configurations, creates a
         return jobURLs
       }
     }
+```
 
 This method does all the job.
 
@@ -285,6 +303,7 @@ Firstly, it selects all the Jobs listed, convert it to javascript array and loop
 
 ### Create a getJobs method
 
+```js
     static async getJobs() {
         const jobs = await this.resolve()
         await browser.close()
@@ -293,6 +312,7 @@ Firstly, it selects all the Jobs listed, convert it to javascript array and loop
         data.total_jobs = jobs.length
         return data
       }
+```
 
 The method simply returns the job array from the `resolver` method and closes the browser.
 
@@ -302,6 +322,7 @@ Next, we are going to set up our Vuex store to retrieve the jobs each time we di
 
 Open the `job` file and add the following codes.
 
+```js
     import JobScrapper from '~/JobScrapper'
 
     // Action
@@ -331,11 +352,13 @@ Open the `job` file and add the following codes.
       jobs: [],
       total_jobs: 0,
     })
+```
 
 ## Displaying Jobs
 
 Open `pages/jobs.vue` file and add the following codes.
 
+```js
     <template>
       <div class="row mt-5">
         <div class="card-group">
@@ -363,6 +386,7 @@ Open `pages/jobs.vue` file and add the following codes.
       }
     }
     </script>
+```
 
 This is just one way you could dispatch the actions in each of the pages you want, but it has to be within the `asyncData()` hook because it is called from the server side.
 
@@ -372,11 +396,13 @@ Let’s me show you how to do that.
 
 Create an `index.js` file inside the `store` folder and add the following codes.
 
+```js
     async nuxtServerInit({ dispatch }) {
         try {
           await dispatch('job/getJobs')
         } catch (error) {}
     },
+```
 
 This will scrape the jobs and save it to state, you can then use `…mapState` or `…mapGetters` to retrieve the job and display it in your component.
 
@@ -384,6 +410,7 @@ In my project, I use the `nuxtServerInit` approach and `…mapState` in any of t
 
 ### Jobs Component
 
+```js
     <template>
       <section>
         ........
@@ -415,6 +442,7 @@ In my project, I use the `nuxtServerInit` approach and `…mapState` in any of t
     }
     </script>
     <style></style>
+```
 
 That’s all.
 
