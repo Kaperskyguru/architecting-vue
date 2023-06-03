@@ -43,7 +43,7 @@ To learn and use Teleport effectively, let's explore some code examples that dem
 
 To start, let's create a simple Vue component that uses Teleport to render its content in a different location. Consider the following code snippet:
 
-```
+```js
 <template>
   <div>
     <button @click="showModal = true">Open Modal</button>
@@ -86,7 +86,7 @@ Teleport also allows you to conditionally render content at different locations.
       </modal>
     </teleport>
     <button @click="showModal = !showModal">
-      {{ showModal ? 'Close Modal' : 'Open Modal' }}
+      { { showModal ? 'Close Modal' : 'Open Modal' } }
     </button>
   </div>
 </template>
