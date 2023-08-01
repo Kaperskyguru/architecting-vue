@@ -1,51 +1,57 @@
-'use strict'
+"use strict";
 
 module.exports = [
   {
-    name: 'Adegbenga Agoro',
-    role: 'Co-Founder / CTO at Crenet',
-    picture: './img/people/agoro.jpeg',
+    name: "Adegbenga Agoro",
+    role: "Co-Founder / CTO at Crenet",
+    picture: "./img/people/agoro.jpeg",
     text: `I was fortunate enough to preview the book before its official release, and I must say, it is an outstanding piece of work. The author skillfully delivers clear and actionable insights for both Vue.js and non-Vue.js frontend engineers.
 
     With its timeless principles, this book offers invaluable strategies for scaling your frontend applications, catering to a wide range of developers.
     
-    Kudos to Solomon for creating such an amazing resource!`
+    Kudos to Solomon for creating such an amazing resource!`,
   },
   {
-    name: 'L. Laurents',
-    role: 'Software Engineer',
-    picture: './img/people/640x480.jpeg',
-    text: 'Overall I got a lot out of this book, The author is clear and concise. Having purchased many templates over the years, some were basic some were really advanced, bending those to what I needed was a pain, this is a great book for Vue.js in general. If I had read this book before building cloud front ends for over three years It would have saved me some serious frustrations. A good reference book to have around, glad I had the chance to review it.'
+    name: "Adora Nwodo",
+    role: "Software Engineer II at Microsoft",
+    picture: "./img/people/adora.jpeg",
+    text: `I was excited to come across this book. I must say, it exceeded my expectations. The book is well-structured, and the author does an excellent job of explaining complex concepts in a clear and concise manner. What sets this book apart is its focus on enterprise-level applications. The author (Solomon) provides practical guidance on how to architect and build applications that are scalable, high-performance, and maintainable. I would highly recommend this book to anyone looking to take their Vue3 skills to the next level. Whether you're a beginner or an experienced developer, you'll find value in this book. It's a must-have resource for anyone looking to build enterprise-ready applications with Vue3 and JavaScript.`,
   },
   {
-    name: 'Anton Saienko',
-    role: 'Front End Developer (Vue.js) at BuyerBridge',
-    picture: './img/people/anton-saienko.jpeg',
+    name: "L. Laurents",
+    role: "Software Engineer",
+    picture: "./img/people/640x480.jpeg",
+    text: "Overall I got a lot out of this book, The author is clear and concise. Having purchased many templates over the years, some were basic some were really advanced, bending those to what I needed was a pain, this is a great book for Vue.js in general. If I had read this book before building cloud front ends for over three years It would have saved me some serious frustrations. A good reference book to have around, glad I had the chance to review it.",
+  },
+  {
+    name: "Anton Saienko",
+    role: "Front End Developer (Vue.js) at BuyerBridge",
+    picture: "./img/people/anton-saienko.jpeg",
     text: `This book is a "must-have" if you want to create Real-Web full scaled Applications!
     The author covers almost everything you would want to know about Vue. There are chapters about testing, deploying, and even dockerizing your Vue app!
     
     The book is easy to follow and provides excellent explanations for all the fundamental concepts. Most importantly that it covers the latest Vue version (Vue 3) and all the latest updates! Of course, each chapter goes with nice examples of code.
     
-    Overall impressions are very good. This is so far the best book about Vue that I've read so far. I can definitely recommend it to everybody who is willing to learn Vue`
+    Overall impressions are very good. This is so far the best book about Vue that I've read so far. I can definitely recommend it to everybody who is willing to learn Vue`,
   },
   {
-    name: 'Pavan',
-    role: 'Software Engineer',
-    picture: './img/people/640x480.jpeg',
-    text: 'Clear and Concise introduction on how to build Enterprise Web Applications. Overall this is a good book and I give it 4 starts. The writing is friendly and not too technical, which makes it accessible for a beginner. The book is not too big and acts as a good starting point for developing large scale frontend applications.'
-  }
-  // {
-  //   name: 'Ersel Aker',
-  //   role: 'Co-founder & CTO at JustFulfil',
-  //   picture: './img/people/ersel-aker-node-js.jpg',
-  //   text: 'Read through a few chapters of Node.js Design Patterns this morning. It\'s an excellent reference book covering everything from from the intricacies of the Node.js runtime to scaling your services to serve millions of users. Grabbed another copy for our engineering team to use as a study tool.'
-  // },
-  // {
-  //   name: 'Mike Rourke',
-  //   role: 'Software Engineer and Author',
-  //   picture: './img/people/mike-rourke-node.jpg',
-  //   text: 'There is a lot of useful content in this book, and I think the title doesn\'t do it justice. If you want a comprehensive book about Node.js that not only acts as a reference for best practices and design patterns, but also as a one-stop shop for understanding how Node.js works behind the scenes, look no further!'
-  // },
+    name: "Pavan",
+    role: "Software Engineer",
+    picture: "./img/people/640x480.jpeg",
+    text: "Clear and Concise introduction on how to build Enterprise Web Applications. Overall this is a good book and I give it 4 starts. The writing is friendly and not too technical, which makes it accessible for a beginner. The book is not too big and acts as a good starting point for developing large scale frontend applications.",
+  },
+  {
+    name: "Daniel Fernandez",
+    role: "Full Stack Software Engineer at Verde Mining",
+    picture: "./img/people/daniel.jpeg",
+    text: "This book would be a great place to begin or continue learning about frontend development with Vue. It is a great starting point for beginners and can definitely teach intermediate developers a lot about the framework, such as Automated Testing for the framework, deployment of a Vue application, and generally important information about state management, routing and working with APIs in the framework. It isn't too technical, which makes the reading easy to follow and understand, and by the end you will definitely have learned how to develop the major parts of a large-scale frontend application. I would recommend the book as solid material for Vue 3 and suggest that if you decide to get this book, follow along through the example applications on your own laptop or computer so that the material is better understood!",
+  },
+  {
+    name: "Nina Ortega",
+    role: "Web Designer at Ralla Klepak",
+    picture: "./img/people/nina.jpg",
+    text: "I received this book as a reviewer copy and what I enjoyed the most about the book was the ease of the read. I have a hard time reading very technical jargon and this book broke things down into simple and easy-to-understand definitions and steps. It has definitely helped expand and deepen my knowledge.",
+  },
   // {
   //   name: 'Maya Shavin',
   //   role: 'Senior Frontend Engineer at Cloudinary',
@@ -94,4 +100,4 @@ module.exports = [
   //   picture: './img/people/maxim-salnikov-node-js.jpg',
   //   text: 'I have "Node.js Design Patterns" always at hand both when I start quick new projects and when the time comes to refactor the larger and mature ones. It\'s an invaluable and well-structured source of patterns, best practices, and guidelines.  Also, it’s always good to know that particular features are in use in well-known projects - thanks to the “In the wild” section. As a full-stack developer focused on the front-end, I especially enjoyed a chapter about universal JavaScript.'
   // }
-]
+];
