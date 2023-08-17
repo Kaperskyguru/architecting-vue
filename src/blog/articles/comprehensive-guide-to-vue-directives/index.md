@@ -11,7 +11,7 @@ author_link: https://www.linkedin.com/in/jimoh-sherifdeen-a01a7518a/
 tags: ["blog"]
 ---
 
-{% responsiveImage './blog/articles/vite-vs-vue-cli/vue-directive.png', 'A screenshot showing Vue directives', { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/comprehensive-guide-to-vue-directives/vue-directive.png', 'A screenshot showing Vue directives', { maxWidth: 848 }  %}
 
 ## Introduction
 

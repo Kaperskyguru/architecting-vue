@@ -1,8 +1,8 @@
 ---
 date: 2023-08-17T15:15:00
 updatedAt: 2023-08-17T15:15:00
-title: Exploring the Heart of Vue.js: Vue Instance and Lifecycle Hooks
-permalink: /blog/comprehensive-guide-to-vue-directives/
+title: "Exploring the Heart of Vue.js: Vue Instance and Lifecycle Hooks"
+permalink: /blog/exploring-the-heart-of-vuejs/
 description: In this article, we will embark on a journey to unravel the intricacies of the Vue instance and dive deep into the lifecycle hooks that empower developers to create dynamic and responsive applications.
 layout: article
 author: Jimoh Sherifdeen
@@ -11,7 +11,7 @@ author_link: https://www.linkedin.com/in/jimoh-sherifdeen-a01a7518a/
 tags: ["blog"]
 ---
 
-{% responsiveImage './blog/articles/vite-vs-vue-cli/lifecycleVue.png', 'A screenshot showing Vue lifecycle', { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/exploring-the-heart-of-vuejs/lifecycleVue.png', 'A screenshot showing Vue lifecycle', { maxWidth: 848 }  %}
 
 ## **Introduction**
 
