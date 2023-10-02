@@ -29,7 +29,7 @@ Also, of course, a code editor (preferably Visual Studio Code).
 
 First off, open your command line interface, navigate to your preferred folder directory and type the command **npm create vue@latest**
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/create-vue-3.png', 'A screenshot showing how to create Vue 3', { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/create-vue-3.jpeg', 'A screenshot showing how to create Vue 3', { maxWidth: 848 }  %}
 
 This will help you create a vue codebase with your preferred configurations by selecting either yes or no when a prompt question is shown.
 Name your project and click enter.
@@ -310,9 +310,9 @@ Lastly, go to the App.vue file and create a new RouterLink for the cart page
 
 Your UI should look like this:
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/uipreview.jpeg', 'A screenshot showing ui cart", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/uipreview.jpeg', 'A screenshot showing ui cart', { maxWidth: 848 }  %}
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/cartpage.jpeg', 'A screenshot showing cart page", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/cartpage.jpeg', 'A screenshot showing cart page', { maxWidth: 848 }  %}
 
 ## Step 4( Accessing store in Vue components)
 
@@ -419,36 +419,36 @@ You will want to see the items which you added recently to be displayed first. F
 
 This tutorial will not be complete if we did not test our codes in a UI. So, go to your browser where **localhost:5173** is running and click on any add button.
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/addbutton.jpeg', 'A screenshot showing add button", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/addbutton.jpeg', 'A screenshot showing add button', { maxWidth: 848 }  %}
 
 Navigate to the cart page. You should see the item you added displayed on the page.
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/removebutton.jpeg', 'A screenshot showing remove button", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/removebutton.jpeg', 'A screenshot showing remove button', { maxWidth: 848 }  %}
 
 Click the remove button to remove the item from the page.
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/removebtn.jpeg', 'A screenshot showing remove button", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/removebtn.jpeg', 'A screenshot showing remove button', { maxWidth: 848 }  %}
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/removedbutton.jpeg', 'A screenshot showing removed button", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/removebutton.jpeg', 'A screenshot showing removed button', { maxWidth: 848 }  %}
 
 ## Step 5( Pinia Devtools)
 
 Pinia devtools are provided by vue to make your developer experience less stressful and more interesting. This way, you can test your store and modifiers in the console without needing a UI.
 To access Pinia devtools, go to [chrome web store](https://chrome.google.com/webstore/category/extensions) and search for vue.js devtools
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/devtools.jpeg', 'A screenshot showing dev tools", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/devtools.jpeg', 'A screenshot showing dev tools', { maxWidth: 848 }  %}
 
 If you already have it installed like i have, the button will display ‘remove from chrome else it will display add to chrome. Click the button to download it.
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/vuedevtool.jpeg', 'A screenshot showing vue dev tool", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/vuedevtool.jpeg', 'A screenshot showing vue dev tool', { maxWidth: 848 }  %}
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/addtochrome.jpeg', 'A screenshot showing add to chrome button", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/addtochrome.jpeg', 'A screenshot showing add to chrome button', { maxWidth: 848 }  %}
 
 When the vue devtools is added, there is no need for further configurations to get Pinia devtools. Vue’s devtools checks your vue website and automatically generates devtools for any vue package which has been installed in your codebase.
 So, open your console, click on vue, and reload your webpage. Vue’s devtools should pickup Pinia in your package and generate devtools for it
 
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/previewdevtool.jpeg', 'A screenshot showing dev tool", { maxWidth: 848 }  %}
-{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/useddevtool.jpeg', 'A screenshot showing used dev tool", { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/previewdevtool.jpeg', 'A screenshot showing dev tool', { maxWidth: 848 }  %}
+{% responsiveImage './blog/articles/how-to-use-pinia-in-vue-3/images/usedevtool.jpeg', 'A screenshot showing used dev tool', { maxWidth: 848 }  %}
 
 From the image above, you can see that Pinia’s devtools displays your state and getters.
 So from the console, you could add new values, delete them, and reset the state comfortably.
