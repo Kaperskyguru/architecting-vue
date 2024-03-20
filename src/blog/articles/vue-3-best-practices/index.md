@@ -7,7 +7,7 @@ description: Vue 3 is a powerful and flexible JavaScript framework that offers m
 layout: article
 author: Ugochukwu Egeonu
 author_profile_pic: /static/ugochukwu-egeonu.png
-author_link: https://solomoneseme.com
+author_link: https://twitter.com/hugolee003
 tags: ["blog"]
 ---
 
