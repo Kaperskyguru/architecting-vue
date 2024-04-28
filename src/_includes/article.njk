@@ -56,6 +56,15 @@ eleventyComputed:
 
         <aside class="column is-one-quarter">
           <div class="wrapper-sticky">
+          <div class="aside-ad-block">
+              <a href="https://store.masteringbackend.com/l/vue-design-pattern" {{ track("click_blog_sidebar_ad_VDP", "blog") }}>
+                {% responsiveImage './img/vue-design-pattern.png', 'Vue Design Pattern book cover', { class: 'book', maxWidth: 380 }  %}
+                <h5 style="font-weight:boldder">Get ready to create Enterprise Vue Applications like a pro!</h5>
+                <p style="padding:5px 0px; font-weight:bold">Pre-Order Now to Avail 30% Discount</p>
+                <p>Designing scalable and enterprise client-side applications with Vue using industry-standard design patterns and best practices.</p>
+              </a>
+            </div>
+
             <div class="aside-ad-block">
               <a href="/" {{ track("click_blog_sidebar_ad", "blog") }}>
                 {% responsiveImage './img/book-stack.png', 'Architecting Vue.js 3 Enterprise-Ready Web Applications book cover', { class: 'book', maxWidth: 380 }  %}
