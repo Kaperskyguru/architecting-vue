@@ -24,7 +24,7 @@ module.exports = function () {
     image: "/img/architecting-enterprise-vue.jpeg",
     imageWidth: 1260,
     imageHeight: 630,
-    analyticsId: "GTM-MG5ZGL7",
+    analyticsId: "G-LNCCTR669E",
     gtmId: "GTM-MG5ZGL7",
     facebookAppId: "756438792839374",
     generator: `${eleventyPackage.name} v${eleventyPackage.version}`,
