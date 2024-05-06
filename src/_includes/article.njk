@@ -65,6 +65,15 @@ eleventyComputed:
               </a>
             </div>
 
+            <div class="aside-ad-block" >
+              <a style="background:#0D7261; color:#fff" target="_blank" href="https://nuxifysaas.com?utm_source=enterprisevue" {{ track("click_blog_sidebar_ad_NuxifySaaS", "blog") }}>
+                {% responsiveImage './img/nuxifysaas.png', 'Launch your startup in days with Nuxt', { class: 'book-ad', maxWidth: 380 }  %}
+                <h5 style="font-weight:boldder; padding:10px 0px">Launch your startup in days with Nuxt</h5>
+                <p style="padding:5px 0px; font-weight:bold">Pre-Order Now at 50% Discount</p>
+                <p>Nuxt SaaS Boilerplate with ready-to-go components for Payments, Auth, Admin, Blog, SEO, Database, Mailing, Templating system(Landing pages, Dashboards) and everything you need to ship your SaaS in days!.</p>
+              </a>
+            </div>
+
             <div class="aside-ad-block">
               <a href="/" {{ track("click_blog_sidebar_ad", "blog") }}>
                 {% responsiveImage './img/book-stack.png', 'Architecting Vue.js 3 Enterprise-Ready Web Applications book cover', { class: 'book', maxWidth: 380 }  %}
